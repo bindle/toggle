@@ -1,0 +1,72 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		A06565EA135A58510025E7F7 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; usesTabs = 0; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		A036ACFA135A582A0007C55B = {
+			isa = PBXGroup;
+			children = (
+				A06565EA135A58510025E7F7 /* README */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		A036ACFC135A582A0007C55B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Bindle Binaries";
+			};
+			buildConfigurationList = A036ACFF135A582A0007C55B /* Build configuration list for PBXProject "Toggle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A036ACFA135A582A0007C55B;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		A036AD01135A582A0007C55B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		A036AD02135A582A0007C55B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A036ACFF135A582A0007C55B /* Build configuration list for PBXProject "Toggle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A036AD01135A582A0007C55B /* Debug */,
+				A036AD02135A582A0007C55B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A036ACFC135A582A0007C55B /* Project object */;
+}

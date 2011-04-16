@@ -2,14 +2,16 @@
 Toggle Provisioning System
 ==========================
 
-   Toggle is a modular open source provisioning system.  Toggle is designed
-   to provide an abstraction layer between one or more billing systems and
-   the back-end systems which provide services to end users.  By using an
-   abstraction layer, either the billing systems or the back-end systems may
-   be modified or replaced without affecting the operation of the other
-   system.  The abstraction layer also permits multiple billing systems to
-   use the same backend systems in order to provide unified user name and
-   passwords for all of the services an organization may provide.
+   Toggle is a modular, open source, provisioning system for Internet
+   services, telecommunications, and system administration. Toggle provides
+   an abstraction layer between the billing systems (front-end systems) and
+   the back-end systems which provide services to end users.  This
+   abstraction layer allows either the billing systems or the back-end
+   systems to be modified or replaced without requiring all systems to be
+   updated. Toggle also enables multiple billing systems to provision
+   services on shared accounts in the backend systems. This enables an
+   organization which uses disparate billing systems to provide unified user
+   names and passwords for services provided by the organization.
 
 
 Contents

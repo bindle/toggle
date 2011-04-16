@@ -1,0 +1,91 @@
+
+Toggle Provisioning System
+==========================
+
+   Toggle is a modular open source provisioning system.  Toggle is designed
+   to provide an abstraction layer between one or more billing systems and
+   the back-end systems which provide services to end users.  By using an
+   abstraction layer, either the billing systems or the back-end systems may
+   be modified or replaced without affecting the operation of the other
+   system.  The abstraction layer also permits multiple billing systems to
+   use the same backend systems in order to provide unified user name and
+   passwords for all of the services an organization may provide.
+
+
+Contents
+--------
+
+   1. Disclaimer
+   2. Software Requirements
+   3. Maintainers
+   4. Source Code
+
+
+Disclaimer
+==========
+
+   This software is provided by the copyright holders and contributors "as
+   is" and any express or implied warranties, including, but not limited to,
+   the implied warranties of merchantability and fitness for a particular
+   purpose are disclaimed. In no event shall Bindle Binaries be liable for
+   any direct, indirect, incidental, special, exemplary, or consequential
+   damages (including, but not limited to, procurement of substitute goods or
+   services; loss of use, data, or profits; or business interruption) however
+   caused and on any theory of liability, whether in contract, strict
+   liability, or tort (including negligence or otherwise) arising in any way
+   out of the use of this software, even if advised of the possibility of
+   such damage.
+
+
+Software Requirements
+=====================
+
+   GNU GCC 4.2.1
+   GNU Libtool 2.4
+   GNU Autoconf 2.65
+   GNU Automake 1.11.1
+   Git 1.7.2.3
+
+
+Maintainers
+===========
+
+   David M. Syzdek
+   Bindle Binaries
+   syzdek@bindlebinaries.com
+
+
+Source Code
+===========
+
+   The source code for this project is maintained using git
+   (http://git-scm.com).  The following contains information to checkout the
+   source code from the git repository.
+
+   Browse Source:
+      https://github.com/bindle/toggle
+      http://toggle.git.sourceforge.net/
+      http://scm.bindlebinaries.com/scm/com.bindlebinaries/toggle.git
+
+   Git URLs:
+      git://github.com/bindle/toggle.git
+      git://toggle.git.sourceforge.net/gitroot/toggle/toggle
+      git://git.scm.bindlebinaries.com/pub/scm/com.bindlebinaries/toggle.git
+      http://http.scm.bindlebinaries.com/pub/scm/com.bindlebinaries/toggle.git
+      ssh://ssh.scm.bindlebinaries.com/pub/scm/com.bindlebinaries/toggle.git
+
+   Downloading Source:
+
+      $ git clone git://github.com/bindle/toggle.git
+
+   Preparing Source:
+
+      $ cd toggle
+      $ ./build-aux/autogen.sh
+
+   Git Branches:
+      master - Current release of packages.
+      next   - changes staged for next release
+      pu     - proposed updates for next release
+      xx/yy+ - branch for testing new changes before merging to 'pu' branch
+

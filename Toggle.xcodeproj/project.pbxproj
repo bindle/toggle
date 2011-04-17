@@ -8,14 +8,24 @@
 
 /* Begin PBXFileReference section */
 		A06565EA135A58510025E7F7 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; usesTabs = 0; };
+		A06565EE135A7B800025E7F7 /* toggled.conf-example */ = {isa = PBXFileReference; explicitFileType = text.script; path = "toggled.conf-example"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		A036ACFA135A582A0007C55B = {
 			isa = PBXGroup;
 			children = (
+				A06565EC135A592F0025E7F7 /* doc */,
 				A06565EA135A58510025E7F7 /* README */,
 			);
+			sourceTree = "<group>";
+		};
+		A06565EC135A592F0025E7F7 /* doc */ = {
+			isa = PBXGroup;
+			children = (
+				A06565EE135A7B800025E7F7 /* toggled.conf-example */,
+			);
+			path = doc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

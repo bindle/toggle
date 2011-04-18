@@ -34,4 +34,130 @@
 #   doc/toggled.conf-example example configuration file for Toggle Daemon
 #
 
+# Core daemon options
+########################################
+
+# deamon options
+Foreground  NO
+PidFile     "/var/run/toggled.pid"
+ArgsFile    "/var/run/toggled.args"
+User        "toggled"
+Group       "daemon"
+
+# logging options
+DebugLevel      0
+SyslogMask      "debug"
+SyslogFacility  "daemon"
+
+# timeout options
+IdleTimeout 3600
+AuthTimeout   60
+
+# thread options
+MaxThreads      20
+MaxIdleThreads   5
+
+# loads modules
+ModulePath     "/usr/local/lib/toggled"
+LoadModule     "mod_ldap.la"
+LoadModule     "mod_regex.la"
+LoadModule     "mod_odbc.la"
+LoadModule     "mod_exec.la"
+LoadModule     "mod_xml.la"
+
+# makes module provisioning command available as a core provisioning command
+ExportCommand "exec" "mod_exec.la" "exec"
+
+
+# System Context Definitions
+########################################
+
+[Context "devel"]
+ContextAccess "read-write"
+ContextAllowCommand "su"
+
+[Context "bindle"]
+ContextAccess "read-write"
+
+[Context "hobo"]
+ContextAlias "bindle"
+
+
+# Database Definitions
+########################################
+
+[Database "ldap"]
+Driver       "mod_ldap.la"
+AuthDB       "NO"
+AccountDB    "YES"
+LDAPURI      "ldap://ldap.bindlebinaries.com/o=internet??sub?(|(accountid=${ACCOUNTID})(username=${USERNAME}))"
+LDAPBindDN   "cn=Directory Manager"
+LDAPBindPW   "drowssap"
+LDAPSASL     "none"
+LDAPAttrAccount  "accountid"
+LDAPAttrServices "accountservices"
+LDAPAttrUsername "username"
+LDAPAttrPassword "userpassword"
+
+
+[Database "admin"]
+Driver       "mod_ldap.la"
+AuthDB       "YES"
+AccountDB    "NO"
+LDAPURI      "ldap://ldap.bindlebinaries.com/ou=People,o=toggle,o=slapdUsers??sub?(username=${USERNAME})"
+LDAPBindDN   "cn=Directory Manager"
+LDAPBindPW   "drowssap"
+LDAPSASL     "none"
+LDAPAttrUsername "username"
+LDAPAttrPassword "userpassword"
+
+
+[Database "mail"]
+Driver       "mod_exec.la"
+AllowAuth    "NO"
+Script       "/usr/local/bin/update-maildir.sh"
+
+
+# Service Definitions
+########################################
+
+[Service "email"]
+Description            "Enables e-mail access"
+RequiredArgument       'MAILQUOTA'       "^[[:digit:]]+$"
+Add mail script "-a ${NEWUSERNAME}"
+Add ldap modify
+Add ldap AttributeAdd  'objectClass'     "mailuser"
+Add ldap AttributeAdd  'mail'            "${USERNAME}"
+Add ldap AttributeAdd  'maildiskquota'   "${MAILQUOTA}"
+Add ldap AttributeAdd  'mailstatus'      "active"
+Add ldap commit
+Del mail script "-d ${USERNAME}"
+Del ldap modify
+Del ldap AttributeDel  'objectClass'     "mailuser"
+Del ldap AttributeDel  'mail'
+Del ldap AttributeDel  'maildiskquota'
+Del ldap AttributeDel  'mailstatus'
+Del ldap commit
+
+
+# Service Attribute Definitions
+########################################
+
+[ServiceAttribute "mailquota"]
+Service "email"
+RequiredArgument           'NEWMAILQUOTA'     "^[[:digit:]]+$"
+Mod ldap modify
+Mod ldap ReplaceAttribute  "maildiskquota"    "${NEWMAILQUOTA}"
+Mod ldap commit
+
+
+[ServiceAttribute "mailaddress"]
+Service "email"
+UpdateTriggeredBy "account" "username"
+Mod ldap modify
+Mod ldap ReplaceAttribute  "mail"             "${NEWUSERNAME}"
+Mod ldap commit
+Mod mail script "-d ${USERNAME} -a ${NEWUSERNAME}"
+
+
 # end of config

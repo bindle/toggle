@@ -59,11 +59,11 @@ MaxIdleThreads   5
 
 # loads modules
 ModulePath     "/usr/local/lib/toggled"
-LoadModule     "mod_ldap.la"
-LoadModule     "mod_regex.la"
-LoadModule     "mod_odbc.la"
-LoadModule     "mod_exec.la"
-LoadModule     "mod_xml.la"
+LoadModule     "mod_ldap.la"    # provides access to LDAP directories
+LoadModule     "mod_regex.la"   # allows POSIX regex in provisioning rules
+LoadModule     "mod_odbc.la"    # provides access to ODBC data sources
+LoadModule     "mod_exec.la"    # allows script execuction in provisioning rules
+LoadModule     "mod_xml.la"     # provides XML access to XML interfaces
 
 # makes module provisioning command available as a core provisioning command
 ExportCommand "exec" "mod_exec.la" "exec"

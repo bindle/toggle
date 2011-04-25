@@ -9,14 +9,33 @@
 /* Begin PBXFileReference section */
 		A06565EA135A58510025E7F7 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; usesTabs = 0; };
 		A06565EE135A7B800025E7F7 /* toggled.conf-example */ = {isa = PBXFileReference; explicitFileType = text.script; path = "toggled.conf-example"; sourceTree = "<group>"; };
+		A076436F1365396B00ABD7BB /* acinclude.m4 */ = {isa = PBXFileReference; explicitFileType = text.script; path = acinclude.m4; sourceTree = "<group>"; };
+		A07643701365397400ABD7BB /* configure.ac */ = {isa = PBXFileReference; explicitFileType = text.script; path = configure.ac; sourceTree = "<group>"; };
+		A076438113653AAF00ABD7BB /* Makefile.am */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; indentWidth = 8; path = Makefile.am; sourceTree = "<group>"; tabWidth = 8; usesTabs = 1; };
+		A0EC369013653D23008F3CC7 /* git-package-version.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "git-package-version.sh"; sourceTree = "<group>"; };
+		A0EC369213653F60008F3CC7 /* autogen.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = autogen.sh; sourceTree = "<group>"; };
+		A0EC369313653F9D008F3CC7 /* AUTHORS */ = {isa = PBXFileReference; lastKnownFileType = text; path = AUTHORS; sourceTree = "<group>"; };
+		A0EC369413653F9D008F3CC7 /* ChangeLog */ = {isa = PBXFileReference; lastKnownFileType = text; path = ChangeLog; sourceTree = "<group>"; };
+		A0EC369513653F9D008F3CC7 /* NEWS */ = {isa = PBXFileReference; lastKnownFileType = text; path = NEWS; sourceTree = "<group>"; };
+		A0EC3696136540FD008F3CC7 /* COPYING */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		A036ACFA135A582A0007C55B = {
 			isa = PBXGroup;
 			children = (
+				A076436F1365396B00ABD7BB /* acinclude.m4 */,
+				A0EC369313653F9D008F3CC7 /* AUTHORS */,
+				A076436D1365391D00ABD7BB /* build-aux */,
+				A0EC369413653F9D008F3CC7 /* ChangeLog */,
+				A07643701365397400ABD7BB /* configure.ac */,
+				A0EC3696136540FD008F3CC7 /* COPYING */,
 				A06565EC135A592F0025E7F7 /* doc */,
+				A07643711365398100ABD7BB /* m4 */,
+				A076438113653AAF00ABD7BB /* Makefile.am */,
+				A0EC369513653F9D008F3CC7 /* NEWS */,
 				A06565EA135A58510025E7F7 /* README */,
+				A0764372136539A100ABD7BB /* src */,
 			);
 			sourceTree = "<group>";
 		};
@@ -26,6 +45,29 @@
 				A06565EE135A7B800025E7F7 /* toggled.conf-example */,
 			);
 			path = doc;
+			sourceTree = "<group>";
+		};
+		A076436D1365391D00ABD7BB /* build-aux */ = {
+			isa = PBXGroup;
+			children = (
+				A0EC369213653F60008F3CC7 /* autogen.sh */,
+				A0EC369013653D23008F3CC7 /* git-package-version.sh */,
+			);
+			path = "build-aux";
+			sourceTree = "<group>";
+		};
+		A07643711365398100ABD7BB /* m4 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = m4;
+			sourceTree = "<group>";
+		};
+		A0764372136539A100ABD7BB /* src */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

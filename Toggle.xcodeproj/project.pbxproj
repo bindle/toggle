@@ -12,6 +12,7 @@
 		A076436F1365396B00ABD7BB /* acinclude.m4 */ = {isa = PBXFileReference; explicitFileType = text.script; path = acinclude.m4; sourceTree = "<group>"; };
 		A07643701365397400ABD7BB /* configure.ac */ = {isa = PBXFileReference; explicitFileType = text.script; path = configure.ac; sourceTree = "<group>"; };
 		A076438113653AAF00ABD7BB /* Makefile.am */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; indentWidth = 8; path = Makefile.am; sourceTree = "<group>"; tabWidth = 8; usesTabs = 1; };
+		A0886C181365F1480045BECE /* service-map.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "service-map.txt"; sourceTree = "<group>"; };
 		A0EC369013653D23008F3CC7 /* git-package-version.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "git-package-version.sh"; sourceTree = "<group>"; };
 		A0EC369213653F60008F3CC7 /* autogen.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = autogen.sh; sourceTree = "<group>"; };
 		A0EC369313653F9D008F3CC7 /* AUTHORS */ = {isa = PBXFileReference; lastKnownFileType = text; path = AUTHORS; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 		A06565EC135A592F0025E7F7 /* doc */ = {
 			isa = PBXGroup;
 			children = (
+				A0886C181365F1480045BECE /* service-map.txt */,
 				A06565EE135A7B800025E7F7 /* toggled.conf-example */,
 			);
 			path = doc;

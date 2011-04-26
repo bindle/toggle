@@ -67,6 +67,9 @@ LoadModule     "mod_odbc.la"    # provides access to ODBC data sources
 LoadModule     "mod_exec.la"    # allows script execuction in provisioning rules
 LoadModule     "mod_xml.la"     # provides XML access to XML interfaces
 LoadModule     "mod_logic.la"   # provides structures such as if, switch, and while
+LoadModule     "mod_crypto.la"  # provides access to hashing functions
+LoadModule     "mod_tables.la"  # provides method of creating hash tables
+LoadModule     "mod_string.la"  # provides acces to string functions
 
 # makes module provisioning command available as a core provisioning command
 ExportCommand "exec" "mod_exec.la" "exec"

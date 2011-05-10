@@ -37,5 +37,42 @@
 #ifndef _TOGGLED_H
 #define _TOGGLED_H 1
 
+///////////////
+//           //
+//  Headers  //
+//           //
+///////////////
+#ifdef PMARK
+#pragma mark Headers
+#endif
+
+
+//////////////
+//          //
+//  Macros  //
+//          //
+//////////////
+#ifdef PMARK
+#pragma mark Macros
+#endif
+
+/*
+ * The macros "BEGIN_C_DECLS" and "END_C_DECLS" are taken verbatim
+ * from section 7.1 of the Libtool 1.5.14 manual.
+ */
+/* BEGIN_C_DECLS should be used at the beginning of your declarations,
+   so that C++ compilers don't mangle their names. Use END_C_DECLS at
+   the end of C declarations. */
+#undef BEGIN_TOGGLED_C_DECLS
+#undef END_TOGGLED_C_DECLS
+#if defined(__cplusplus) || defined(c_plusplus)
+#   define BEGIN_TOGGLED_C_DECLS  extern "C" {    ///< exports as C functions
+#   define END_TOGGLED_C_DECLS    }               ///< exports as C functions
+#else
+#   define BEGIN_TOGGLED_C_DECLS  /* empty */     ///< exports as C functions
+#   define END_TOGGLED_C_DECLS    /* empty */     ///< exports as C functions
+#endif
+
+
 #endif
 /* end of header */

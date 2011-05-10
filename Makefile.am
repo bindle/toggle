@@ -55,7 +55,7 @@ DEFS					=
 # automake targets
 check_PROGRAMS				=
 doc_DATA				=
-include_HEADERS				=
+include_HEADERS				= include/toggled.h include/toggled_module.h
 lib_LTLIBRARIES				=
 man_MANS				=
 info_TEXINFOS				=

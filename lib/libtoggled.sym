@@ -1,0 +1,5 @@
+toggled_errno
+toggled_initialize
+toggled_perror
+toggled_strerror
+toggled_strerror_r

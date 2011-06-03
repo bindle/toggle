@@ -56,13 +56,27 @@ DEFS					=
 check_PROGRAMS				=
 doc_DATA				=
 include_HEADERS				= include/toggled.h include/toggled_module.h
-lib_LTLIBRARIES				=
+lib_LTLIBRARIES				= lib/libtoggled.la
 man_MANS				=
 info_TEXINFOS				=
 noinst_LTLIBRARIES			=
 noinst_HEADERS				=
 noinst_PROGRAMS				=
 bin_PROGRAMS				=
+
+
+# macros for lib/libtoggled.la
+lib_libtoggled_la_DEPENDENCIES		= Makefile lib/libtoggled.sym
+lib_libtoggled_la_CFLAGS		= $(AM_CFLAGS)
+lib_libtoggled_la_LIBADD		= $(AM_LIBS)
+lib_libtoggled_la_LDFLAGS		= -rpath '$(libdir)' \
+					  -version-info $(LIB_VERSION_INFO) \
+					  $(AM_LDFLAGS) \
+					  -pthread \
+					  -export-symbols $(srcdir)/lib/libtoggled.sym
+lib_libtoggled_la_SOURCES		= include/toggled.h \
+					  lib/libtoggled.h \
+					  lib/libtoggled_errors.c
 
 
 # substitution routine
@@ -106,7 +120,8 @@ XFAIL_TESTS				=
 EXTRA_MANS				=
 EXTRA_DIST				= build-aux/autogen.sh \
 					  build-aux/git-package-version \
-					  build-aux/git-package-version.sh
+					  build-aux/git-package-version.sh \
+					  lib/libtoggled.sym
 CLEANFILES				= \
 					  $(builddir)/a.out   $(srcdir)/a.out \
 					  $(builddir)/*/a.out $(srcdir)/*/a.out \

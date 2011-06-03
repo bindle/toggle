@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		A0013C2D13985AA8002C1065 /* libtoggled.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libtoggled.h; sourceTree = "<group>"; };
+		A0013C36139865B6002C1065 /* libtoggled_errors.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = libtoggled_errors.c; sourceTree = "<group>"; };
+		A0013C37139865B6002C1065 /* libtoggled_memory.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = libtoggled_memory.c; sourceTree = "<group>"; };
+		A0013C381398BC5A002C1065 /* libtoggled.sym */ = {isa = PBXFileReference; explicitFileType = text.script; path = libtoggled.sym; sourceTree = "<group>"; };
 		A06565EA135A58510025E7F7 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; usesTabs = 0; };
 		A06565EE135A7B800025E7F7 /* toggled.conf-example */ = {isa = PBXFileReference; explicitFileType = text.script; path = "toggled.conf-example"; sourceTree = "<group>"; };
 		A076436F1365396B00ABD7BB /* acinclude.m4 */ = {isa = PBXFileReference; explicitFileType = text.script; path = acinclude.m4; sourceTree = "<group>"; };
@@ -24,6 +28,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		A0013C2B13985A8A002C1065 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				A0013C381398BC5A002C1065 /* libtoggled.sym */,
+				A0013C2D13985AA8002C1065 /* libtoggled.h */,
+				A0013C36139865B6002C1065 /* libtoggled_errors.c */,
+				A0013C37139865B6002C1065 /* libtoggled_memory.c */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 		A036ACFA135A582A0007C55B = {
 			isa = PBXGroup;
 			children = (
@@ -35,6 +50,7 @@
 				A0EC3696136540FD008F3CC7 /* COPYING */,
 				A06565EC135A592F0025E7F7 /* doc */,
 				A0B6FD471378F82000B0ED38 /* include */,
+				A0013C2B13985A8A002C1065 /* lib */,
 				A07643711365398100ABD7BB /* m4 */,
 				A076438113653AAF00ABD7BB /* Makefile.am */,
 				A0EC369513653F9D008F3CC7 /* NEWS */,

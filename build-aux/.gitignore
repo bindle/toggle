@@ -4,6 +4,7 @@
 /config.log
 /config.status
 /config.sub
+/depcomp
 /git-package-version
 /install-sh
 /libtool

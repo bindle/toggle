@@ -43,8 +43,14 @@
 //           //
 ///////////////
 #ifdef PMARK
+#pragma mark -
 #pragma mark Headers
 #endif
+
+#include <inttypes.h>
+#include <stdio.h>
+#include <stdarg.h>
+#include <ltdl.h>
 
 
 //////////////
@@ -53,6 +59,7 @@
 //          //
 //////////////
 #ifdef PMARK
+#pragma mark -
 #pragma mark Macros
 #endif
 
@@ -74,5 +81,90 @@
 #endif
 
 
+///////////////////
+//               //
+//  Definitions  //
+//               //
+///////////////////
+#ifdef PMARK
+#pragma mark -
+#pragma mark Definitions
+#endif
+
+// error codes
+#define TOGGLED_EFLAG_FATAL    0x1000
+#define TOGGLED_EFLAG_ERROR    0x2000
+#define TOGGLED_EFLAG_INFO     0x0000
+#define TOGGLED_EMASK_MSG      0x0FFF
+#define TOGGLED_EMASK_FLAG     0xF000
+#define TOGGLED_ESUCCESS      (0x0000 | TOGGLED_EFLAG_INFO)
+#define TOGGLED_ENOMEM        (0x0001 | TOGGLED_EFLAG_FATAL)
+#define TOGGLED_EHANDLE       (0x0002 | TOGGLED_EFLAG_FATAL)
+
+
+/////////////////
+//             //
+//  Datatypes  //
+//             //
+/////////////////
+#ifdef PMARK
+#pragma mark -
+#pragma mark Datatypes
+#endif
+
+// @brief internal state of library handle
+typedef struct toggled_library TOGGLED;
+struct toggled_library
+{
+   int      errno_in;    ///< error code used internally
+   int      errno_ex;    ///< error code used publicly
+};
+
+
+//////////////////
+//              //
+//  Prototypes  //
+//              //
+//////////////////
+#ifdef PMARK
+#pragma mark -
+#pragma mark Prototypes
+#endif
+BEGIN_TOGGLED_C_DECLS
+
+/*
+ *  Error API          -- Functions for retrieving error information
+ *  Memory API         -- Functions for managing library memory
+ */
+
+/***************/
+/*  Error API  */
+/***************/
+
+// returns error code
+int toggled_errno(TOGGLED * td);
+
+// prints error message
+void toggled_perror(TOGGLED * td, const char * s);
+
+// returns error message
+const char * toggled_strerror(int errnum);
+
+// copies error message into buffer
+int toggled_strerror_r(int errnum, char * strerrbuff, size_t bufflen);
+
+
+/****************/
+/*  Memory API  */
+/****************/
+
+// initializes library handle
+int toggled_initialize(TOGGLED ** tdp);
+
+// closes sessions and frees resources
+int toggled_terminate(TOGGLED * td);
+
+
+END_TOGGLED_C_DECLS
 #endif
 /* end of header */

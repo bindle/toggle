@@ -98,5 +98,18 @@ struct toggled_module_info
 };
 
 
+/// @brief internal map for switching between an directive's ASCII and numeric values
+typedef struct odbcshell_option_data ODBCShellOption;
+struct odbcshell_option_data
+{
+   uint64_t      val;        ///< option ID
+   uint64_t      min_arg;    ///< minimum arguments allowed
+   uint64_t      max_arg;    ///< maximum arguments allowed
+   const char  * name;       ///< option description
+   const char  * desc;       ///< option description
+   const char ** usage;      ///< option usage
+};
+
+
 #endif
 /* end of header */

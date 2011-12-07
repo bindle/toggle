@@ -157,7 +157,7 @@ int toggled_strerror_r(int errnum, char * strerrbuff, size_t bufflen);
 int toggled_initialize(TOGGLED ** tdp);
 
 // closes sessions and frees resources
-int toggled_terminate(TOGGLED * td);
+void toggled_terminate(TOGGLED * td);
 
 
 END_TOGGLED_C_DECLS

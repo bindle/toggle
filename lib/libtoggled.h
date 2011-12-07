@@ -44,8 +44,7 @@
 //               //
 ///////////////////
 #ifdef PMARK
-#pragma mark -
-#pragma mark Definitions
+#pragma mark - Definitions
 #endif
 
 #ifdef HAVE_CONFIG_H
@@ -63,8 +62,7 @@
 //           //
 ///////////////
 #ifdef PMARK
-#pragma mark -
-#pragma mark Headers
+#pragma mark - Headers
 #endif
 
 #include <toggled.h>
@@ -80,8 +78,7 @@
 //          //
 //////////////
 #ifdef PMARK
-#pragma mark -
-#pragma mark Macros
+#pragma mark - Macros
 #endif
 
 
@@ -92,8 +89,7 @@
 //               //
 ///////////////////
 #ifdef PMARK
-#pragma mark -
-#pragma mark i18l Support
+#pragma mark - i18l Support
 #endif
 
 #ifdef HAVE_GETTEXT

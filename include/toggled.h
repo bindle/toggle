@@ -43,8 +43,7 @@
 //           //
 ///////////////
 #ifdef PMARK
-#pragma mark -
-#pragma mark Headers
+#pragma mark - Headers
 #endif
 
 #include <inttypes.h>
@@ -59,8 +58,7 @@
 //          //
 //////////////
 #ifdef PMARK
-#pragma mark -
-#pragma mark Macros
+#pragma mark - Macros
 #endif
 
 /*
@@ -87,8 +85,7 @@
 //               //
 ///////////////////
 #ifdef PMARK
-#pragma mark -
-#pragma mark Definitions
+#pragma mark - Definitions
 #endif
 
 // error codes
@@ -108,8 +105,7 @@
 //             //
 /////////////////
 #ifdef PMARK
-#pragma mark -
-#pragma mark Datatypes
+#pragma mark - Datatypes
 #endif
 
 // @brief internal state of library handle
@@ -127,8 +123,7 @@ struct toggled_library
 //              //
 //////////////////
 #ifdef PMARK
-#pragma mark -
-#pragma mark Prototypes
+#pragma mark - Prototypes
 #endif
 BEGIN_TOGGLED_C_DECLS
 

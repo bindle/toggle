@@ -55,8 +55,7 @@
 //             //
 /////////////////
 #ifdef PMARK
-#pragma mark -
-#pragma mark Functions
+#pragma mark - Functions
 #endif
 
 /// @brief returns error code
@@ -91,9 +90,9 @@ const char * toggled_strerror(int errnum)
 {
    switch(errnum)
    {
-      case TOGGLED_ESUCCESS:   return("success");
-      case TOGGLED_ENOMEM:     return("out of virtual memory");
-      case TOGGLED_EHANDLE:    return("invalid library handle or pointer");
+      case TOGGLED_ESUCCESS:   return(_("success"));
+      case TOGGLED_ENOMEM:     return(_("out of virtual memory"));
+      case TOGGLED_EHANDLE:    return(_("invalid library handle or pointer"));
       default:
          break;
    };

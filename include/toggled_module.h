@@ -43,8 +43,7 @@
 //           //
 ///////////////
 #ifdef PMARK
-#pragma mark -
-#pragma mark Headers
+#pragma mark - Headers
 #endif
 
 #include <toggled.h>
@@ -57,8 +56,7 @@
 //               //
 ///////////////////
 #ifdef PMARK
-#pragma mark -
-#pragma mark Definitions & Macros
+#pragma mark - Definitions & Macros
 #endif
 
 // toggled module API version info
@@ -73,8 +71,7 @@
 //             //
 /////////////////
 #ifdef PMARK
-#pragma mark -
-#pragma mark Datatypes
+#pragma mark - Datatypes
 #endif
 
 /// @brief toggled module information

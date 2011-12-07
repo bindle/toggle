@@ -55,8 +55,7 @@
 //             //
 /////////////////
 #ifdef PMARK
-#pragma mark -
-#pragma mark Functions
+#pragma mark - Functions
 #endif
 
 /// @brief initializes library handle

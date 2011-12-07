@@ -6,11 +6,95 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		A02A0941148F46D2002CF25C /* Toggle System */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A02A0942148F46D2002CF25C /* Build configuration list for PBXAggregateTarget "Toggle System" */;
+			buildPhases = (
+			);
+			dependencies = (
+				A02A094A148F46F0002CF25C /* PBXTargetDependency */,
+				A02A094C148F46F0002CF25C /* PBXTargetDependency */,
+			);
+			name = "Toggle System";
+			productName = "Toggle System";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		A02A093E148F46B7002CF25C /* libtoggle.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A02A092C148F461A002CF25C /* libtoggle.dylib */; };
+		A02A093F148F46B7002CF25C /* libtoggled.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A02A0934148F4624002CF25C /* libtoggled.dylib */; };
+		A02A0940148F46C0002CF25C /* libtoggle.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A02A092C148F461A002CF25C /* libtoggle.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A02A0938148F4692002CF25C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A036ACFC135A582A0007C55B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A02A092B148F461A002CF25C;
+			remoteInfo = libtoggle;
+		};
+		A02A093A148F4699002CF25C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A036ACFC135A582A0007C55B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A02A092B148F461A002CF25C;
+			remoteInfo = libtoggle;
+		};
+		A02A093C148F4699002CF25C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A036ACFC135A582A0007C55B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A02A0933148F4624002CF25C;
+			remoteInfo = libtoggled;
+		};
+		A02A0949148F46F0002CF25C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A036ACFC135A582A0007C55B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A02A090F148F45DE002CF25C;
+			remoteInfo = toggled;
+		};
+		A02A094B148F46F0002CF25C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A036ACFC135A582A0007C55B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A02A091D148F45FA002CF25C;
+			remoteInfo = toggle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A02A090E148F45DE002CF25C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		A02A091C148F45FA002CF25C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		A0013C2D13985AA8002C1065 /* libtoggled.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libtoggled.h; sourceTree = "<group>"; };
 		A0013C36139865B6002C1065 /* libtoggled_errors.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = libtoggled_errors.c; sourceTree = "<group>"; };
 		A0013C37139865B6002C1065 /* libtoggled_memory.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = libtoggled_memory.c; sourceTree = "<group>"; };
 		A0013C381398BC5A002C1065 /* libtoggled.sym */ = {isa = PBXFileReference; explicitFileType = text.script; path = libtoggled.sym; sourceTree = "<group>"; };
+		A02A0910148F45DE002CF25C /* toggled */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = toggled; sourceTree = BUILT_PRODUCTS_DIR; };
+		A02A091E148F45FA002CF25C /* toggle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = toggle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A02A092C148F461A002CF25C /* libtoggle.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libtoggle.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		A02A0934148F4624002CF25C /* libtoggled.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libtoggled.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		A06565EA135A58510025E7F7 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; usesTabs = 0; };
 		A06565EE135A7B800025E7F7 /* toggled.conf-example */ = {isa = PBXFileReference; explicitFileType = text.script; path = "toggled.conf-example"; sourceTree = "<group>"; };
 		A076436F1365396B00ABD7BB /* acinclude.m4 */ = {isa = PBXFileReference; explicitFileType = text.script; path = acinclude.m4; sourceTree = "<group>"; };
@@ -27,6 +111,40 @@
 		A0EC3696136540FD008F3CC7 /* COPYING */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFrameworksBuildPhase section */
+		A02A090D148F45DE002CF25C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A02A093E148F46B7002CF25C /* libtoggle.dylib in Frameworks */,
+				A02A093F148F46B7002CF25C /* libtoggled.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A02A091B148F45FA002CF25C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A02A0940148F46C0002CF25C /* libtoggle.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A02A0929148F461A002CF25C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A02A0931148F4624002CF25C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
 		A0013C2B13985A8A002C1065 /* lib */ = {
 			isa = PBXGroup;
@@ -37,6 +155,17 @@
 				A0013C37139865B6002C1065 /* libtoggled_memory.c */,
 			);
 			path = lib;
+			sourceTree = "<group>";
+		};
+		A02A08FD148F442D002CF25C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A02A0910148F45DE002CF25C /* toggled */,
+				A02A091E148F45FA002CF25C /* toggle */,
+				A02A092C148F461A002CF25C /* libtoggle.dylib */,
+				A02A0934148F4624002CF25C /* libtoggled.dylib */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		A036ACFA135A582A0007C55B = {
@@ -56,6 +185,7 @@
 				A0EC369513653F9D008F3CC7 /* NEWS */,
 				A06565EA135A58510025E7F7 /* README */,
 				A0764372136539A100ABD7BB /* src */,
+				A02A08FD148F442D002CF25C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +232,97 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		A02A092A148F461A002CF25C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A02A0932148F4624002CF25C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A02A090F148F45DE002CF25C /* toggled */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A02A0917148F45DE002CF25C /* Build configuration list for PBXNativeTarget "toggled" */;
+			buildPhases = (
+				A02A090C148F45DE002CF25C /* Sources */,
+				A02A090D148F45DE002CF25C /* Frameworks */,
+				A02A090E148F45DE002CF25C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A02A093B148F4699002CF25C /* PBXTargetDependency */,
+				A02A093D148F4699002CF25C /* PBXTargetDependency */,
+			);
+			name = toggled;
+			productName = toggled;
+			productReference = A02A0910148F45DE002CF25C /* toggled */;
+			productType = "com.apple.product-type.tool";
+		};
+		A02A091D148F45FA002CF25C /* toggle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A02A0925148F45FA002CF25C /* Build configuration list for PBXNativeTarget "toggle" */;
+			buildPhases = (
+				A02A091A148F45FA002CF25C /* Sources */,
+				A02A091B148F45FA002CF25C /* Frameworks */,
+				A02A091C148F45FA002CF25C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A02A0939148F4692002CF25C /* PBXTargetDependency */,
+			);
+			name = toggle;
+			productName = toggle;
+			productReference = A02A091E148F45FA002CF25C /* toggle */;
+			productType = "com.apple.product-type.tool";
+		};
+		A02A092B148F461A002CF25C /* libtoggle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A02A092D148F461A002CF25C /* Build configuration list for PBXNativeTarget "libtoggle" */;
+			buildPhases = (
+				A02A0928148F461A002CF25C /* Sources */,
+				A02A0929148F461A002CF25C /* Frameworks */,
+				A02A092A148F461A002CF25C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libtoggle;
+			productName = libtoggle;
+			productReference = A02A092C148F461A002CF25C /* libtoggle.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		A02A0933148F4624002CF25C /* libtoggled */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A02A0935148F4624002CF25C /* Build configuration list for PBXNativeTarget "libtoggled" */;
+			buildPhases = (
+				A02A0930148F4624002CF25C /* Sources */,
+				A02A0931148F4624002CF25C /* Frameworks */,
+				A02A0932148F4624002CF25C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libtoggled;
+			productName = libtoggled;
+			productReference = A02A0934148F4624002CF25C /* libtoggled.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
 /* Begin PBXProject section */
 		A036ACFC135A582A0007C55B /* Project object */ = {
 			isa = PBXProject;
@@ -116,29 +337,330 @@
 				en,
 			);
 			mainGroup = A036ACFA135A582A0007C55B;
+			productRefGroup = A02A08FD148F442D002CF25C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				A02A0941148F46D2002CF25C /* Toggle System */,
+				A02A090F148F45DE002CF25C /* toggled */,
+				A02A091D148F45FA002CF25C /* toggle */,
+				A02A092B148F461A002CF25C /* libtoggle */,
+				A02A0933148F4624002CF25C /* libtoggled */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXSourcesBuildPhase section */
+		A02A090C148F45DE002CF25C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A02A091A148F45FA002CF25C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A02A0928148F461A002CF25C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A02A0930148F4624002CF25C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A02A0939148F4692002CF25C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A02A092B148F461A002CF25C /* libtoggle */;
+			targetProxy = A02A0938148F4692002CF25C /* PBXContainerItemProxy */;
+		};
+		A02A093B148F4699002CF25C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A02A092B148F461A002CF25C /* libtoggle */;
+			targetProxy = A02A093A148F4699002CF25C /* PBXContainerItemProxy */;
+		};
+		A02A093D148F4699002CF25C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A02A0933148F4624002CF25C /* libtoggled */;
+			targetProxy = A02A093C148F4699002CF25C /* PBXContainerItemProxy */;
+		};
+		A02A094A148F46F0002CF25C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A02A090F148F45DE002CF25C /* toggled */;
+			targetProxy = A02A0949148F46F0002CF25C /* PBXContainerItemProxy */;
+		};
+		A02A094C148F46F0002CF25C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A02A091D148F45FA002CF25C /* toggle */;
+			targetProxy = A02A094B148F46F0002CF25C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		A02A0918148F45DE002CF25C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A02A0919148F45DE002CF25C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A02A0926148F45FA002CF25C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A02A0927148F45FA002CF25C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A02A092E148F461A002CF25C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A02A092F148F461A002CF25C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A02A0936148F4624002CF25C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A02A0937148F4624002CF25C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A02A0943148F46D2002CF25C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A02A0944148F46D2002CF25C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		A036AD01135A582A0007C55B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 			};
 			name = Debug;
 		};
 		A036AD02135A582A0007C55B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A02A0917148F45DE002CF25C /* Build configuration list for PBXNativeTarget "toggled" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A02A0918148F45DE002CF25C /* Debug */,
+				A02A0919148F45DE002CF25C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A02A0925148F45FA002CF25C /* Build configuration list for PBXNativeTarget "toggle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A02A0926148F45FA002CF25C /* Debug */,
+				A02A0927148F45FA002CF25C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A02A092D148F461A002CF25C /* Build configuration list for PBXNativeTarget "libtoggle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A02A092E148F461A002CF25C /* Debug */,
+				A02A092F148F461A002CF25C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A02A0935148F4624002CF25C /* Build configuration list for PBXNativeTarget "libtoggled" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A02A0936148F4624002CF25C /* Debug */,
+				A02A0937148F4624002CF25C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A02A0942148F46D2002CF25C /* Build configuration list for PBXAggregateTarget "Toggle System" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A02A0943148F46D2002CF25C /* Debug */,
+				A02A0944148F46D2002CF25C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		A036ACFF135A582A0007C55B /* Build configuration list for PBXProject "Toggle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

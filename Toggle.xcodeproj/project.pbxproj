@@ -104,7 +104,6 @@
 		A0B6FD491378F85D00B0ED38 /* toggled_module.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = toggled_module.h; sourceTree = "<group>"; };
 		A0B6FD4A1378F85D00B0ED38 /* toggled.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = toggled.h; sourceTree = "<group>"; };
 		A0C362B51613C02500B264B9 /* bindletools.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = bindletools.xcodeproj; path = bindletools/bindletools.xcodeproj; sourceTree = "<group>"; };
-		A0EC369213653F60008F3CC7 /* autogen.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = autogen.sh; sourceTree = "<group>"; };
 		A0EC369313653F9D008F3CC7 /* AUTHORS */ = {isa = PBXFileReference; lastKnownFileType = text; path = AUTHORS; sourceTree = "<group>"; };
 		A0EC369413653F9D008F3CC7 /* ChangeLog */ = {isa = PBXFileReference; lastKnownFileType = text; path = ChangeLog; sourceTree = "<group>"; };
 		A0EC369513653F9D008F3CC7 /* NEWS */ = {isa = PBXFileReference; lastKnownFileType = text; path = NEWS; sourceTree = "<group>"; };
@@ -202,7 +201,6 @@
 		A076436D1365391D00ABD7BB /* build-aux */ = {
 			isa = PBXGroup;
 			children = (
-				A0EC369213653F60008F3CC7 /* autogen.sh */,
 			);
 			path = "build-aux";
 			sourceTree = "<group>";

@@ -118,8 +118,7 @@ BUILT_SOURCES				= include/git-package-version
 TESTS					=
 XFAIL_TESTS				=
 EXTRA_MANS				=
-EXTRA_DIST				= build-aux/autogen.sh \
-					  build-aux/git-tar-name.txt  \
+EXTRA_DIST				= build-aux/git-tar-name.txt  \
 					  contrib/bindletools/COPYING \
 					  contrib/bindletools/README \
 					  contrib/bindletools/build-aux/autogen.sh \
@@ -145,11 +144,6 @@ include/git-package-version:
 
 autoreconf:
 	autoreconf -i -f $(ACLOCAL_AMFLAGS) $(top_srcdir)
-
-update:
-	git --git-dir=$(top_srcdir)/.git pull 2> /dev/null || exit 0
-	$(top_srcdir)/build-aux/autogen.sh
-	test -x ./config.status && { ./config.status --recheck || exit $?; } || exit 0
 
 gitclean:
 	$(MAKE) -f Makefile distclean

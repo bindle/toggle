@@ -97,7 +97,7 @@ AC_PROG_LN_S
 LT_INIT(dlopen disable-fast-install win32-dll)
 
 # custom configure options
-AC_TOGGLE_ENABLE_WARNINGS
+AC_BINDLE_ENABLE_WARNINGS
 
 # Geek Humor check
 AC_CHECK_LIB([aundry],[clean socks],,[AC_MSG_NOTICE([No clean socks found.])])
@@ -106,7 +106,7 @@ AC_CHECK_LIB([aundry],[clean socks],,[AC_MSG_NOTICE([No clean socks found.])])
 AC_CHECK_HEADERS([getopt.h], [AC_DEFINE_UNQUOTED(USE_GETOPT_LONG, 1, [Use GNU getopt_long])])
 
 # determine PACKAGE_VERSION via Git
-AC_DMS_GIT_PACKAGE_VERSION
+AC_BINDLE_GIT_PACKAGE_VERSION([contrib/bindletools/build-aux/git-package-version.sh])
 
 # Creates outputs
 AC_CONFIG_FILES([Makefile])

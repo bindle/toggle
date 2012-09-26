@@ -47,7 +47,7 @@ AM_CFLAGS				= -O2 $(CFLAGS_WARNINGS)
 AM_CXXFLAGS				= -O2 @AM_CXXFLAGS@
 AM_OBJCFLAGS				= -O2 @AM_OBJCFLAGS@
 AM_CPPFLAGS				= -O2 -UPMARK -DHAVE_CONFIG_H=1 -I$(top_builddir)/include -I$(top_srcdir)/include -DSYSCONFDIR="\"$(sysconfdir)\""
-ACLOCAL_AMFLAGS				= -I m4 -W all -W error
+ACLOCAL_AMFLAGS				= -I m4 -I contrib/bindletools/m4 -W all -W error
 AM_MAKEINFOFLAGS                        = --no-split
 DEFS					=
 
@@ -114,13 +114,18 @@ do_subst_dt = \
 
 
 # lists
-BUILT_SOURCES				=
+BUILT_SOURCES				= include/git-package-version
 TESTS					=
 XFAIL_TESTS				=
 EXTRA_MANS				=
 EXTRA_DIST				= build-aux/autogen.sh \
-					  build-aux/git-package-version \
-					  build-aux/git-package-version.sh \
+					  build-aux/git-tar-name.txt  \
+					  contrib/bindletools/COPYING \
+					  contrib/bindletools/README \
+					  contrib/bindletools/build-aux/autogen.sh \
+					  contrib/bindletools/build-aux/git-package-version.sh \
+					  contrib/bindletools/m4/bindle.m4 \
+					  include/git-package-version.txt \
 					  lib/libtoggled.sym
 CLEANFILES				= \
 					  $(builddir)/a.out   $(srcdir)/a.out \
@@ -133,10 +138,10 @@ DISTCHECK_CONFIGURE_FLAGS		= --enable-strictwarnings
 
 
 # custom targets
-.PHONY: autoreconf update gitclean build-aux/git-package-version
+.PHONY: autoreconf update gitclean include/git-package-version
 
-build-aux/git-package-version:
-	$(top_srcdir)/build-aux/git-package-version.sh $(top_srcdir)
+include/git-package-version:
+	@@GIT_VERSION_SCRIPT@ $(top_srcdir) > /dev/null 2>&1
 
 autoreconf:
 	autoreconf -i -f $(ACLOCAL_AMFLAGS) $(top_srcdir)
@@ -153,7 +158,7 @@ gitclean:
 	rm -f  $(top_srcdir)/aclocal.m4
 	rm -f  $(top_srcdir)/config.h.in
 	rm -f  $(top_srcdir)/configure
-	rm -f  $(top_srcdir)/build-aux/git-package-version
+	rm -f  $(top_srcdir)/include/git-package-version
 
 
 # local targets

@@ -24,7 +24,7 @@ Contents
 
 
 Disclaimer
-==========
+----------
 
    This software is provided by the copyright holders and contributors "as
    is" and any express or implied warranties, including, but not limited to,
@@ -40,7 +40,7 @@ Disclaimer
 
 
 Software Requirements
-=====================
+---------------------
 
    GNU GCC 4.2.1
    GNU Libtool 2.4
@@ -50,7 +50,7 @@ Software Requirements
 
 
 Maintainers
-===========
+-----------
 
    David M. Syzdek
    Bindle Binaries
@@ -58,7 +58,7 @@ Maintainers
 
 
 Source Code
-===========
+-----------
 
    The source code for this project is maintained using git
    (http://git-scm.com).  The following contains information to checkout the
@@ -67,23 +67,17 @@ Source Code
    Browse Source:
       https://github.com/bindle/toggle
       http://toggle.git.sourceforge.net/
-      http://scm.bindlebinaries.com/scm/com.bindlebinaries/toggle.git
 
    Git URLs:
       git://github.com/bindle/toggle.git
       git://toggle.git.sourceforge.net/gitroot/toggle/toggle
-      git://git.scm.bindlebinaries.com/pub/scm/com.bindlebinaries/toggle.git
-      http://http.scm.bindlebinaries.com/pub/scm/com.bindlebinaries/toggle.git
-      ssh://ssh.scm.bindlebinaries.com/pub/scm/com.bindlebinaries/toggle.git
 
-   Downloading Source:
-
-      $ git clone git://github.com/bindle/toggle.git
+   Downloading Source  with Git::
+      $ git clone --recursive git://github.com/bindle/toggle.git toggle
 
    Preparing Source:
-
       $ cd toggle
-      $ ./build-aux/autogen.sh
+      $ autoreconf -I ./m4/ -I ./contrib/bindletools/m4/ -i
 
    Git Branches:
       master - Current release of packages.

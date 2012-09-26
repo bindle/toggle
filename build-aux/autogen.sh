@@ -40,7 +40,7 @@ AUTOSRCDIR=`dirname ${0}`   || exit $?
 AUTOSRCDIR=${AUTOSRCDIR}/..
 
 echo "${AUTOGENNAME}: running \"autoreconf -i -f -I m4 ${AUTOSRCDIR}\""
-autoreconf -i -f -I m4 ${AUTOSRCDIR} || exit $?
+autoreconf -i -f -I m4 -I contrib/bindletools/m4 ${AUTOSRCDIR} || exit $?
 
 echo "${AUTOGENNAME}: removing temp files"
 rm -rf ${AUTOSRCDIR}/autom4te.cache || exit $?

@@ -60,27 +60,17 @@ lib_LTLIBRARIES				= lib/libtoggled.la
 man_MANS				=
 info_TEXINFOS				=
 noinst_LTLIBRARIES			=
-noinst_HEADERS				=
+noinst_HEADERS				= include/git-package-version.h
 noinst_PROGRAMS				=
 bin_PROGRAMS				=
 
 
 # lists
-BUILT_SOURCES				= include/git-package-version.h
+BUILT_SOURCES				=
 TESTS					=
 XFAIL_TESTS				=
 EXTRA_MANS				=
 EXTRA_DIST				= build-aux/git-tar-name.txt  \
-					  contrib/bindletools/COPYING \
-					  contrib/bindletools/README \
-					  contrib/bindletools/build-aux/autogen.sh \
-					  contrib/bindletools/build-aux/git-package-version.sh \
-					  contrib/bindletools/build-aux/makefile-autotools.am \
-					  contrib/bindletools/build-aux/makefile-subst.am \
-					  contrib/bindletools/build-aux/makefile-version.am \
-					  contrib/bindletools/m4/bindle-gcc.m4 \
-					  contrib/bindletools/m4/bindle-git.m4 \
-					  include/git-package-version.txt \
 					  lib/libtoggled/libtoggled.sym
 CLEANFILES				= \
 					  $(builddir)/a.out   $(srcdir)/a.out \
@@ -101,7 +91,8 @@ lib_libtoggled_la_LDFLAGS		= -rpath '$(libdir)' \
 					  $(AM_LDFLAGS) \
 					  -pthread \
 					  -export-symbols $(srcdir)/lib/libtoggled/libtoggled.sym
-lib_libtoggled_la_SOURCES		= include/toggled.h \
+lib_libtoggled_la_SOURCES		= $(include_HEADERS) \
+					  $(noinst_HEADERS) \
 					  lib/libtoggled/libtoggled.h \
 					  lib/libtoggled/libtoggled_errors.c
 
@@ -109,9 +100,9 @@ lib_libtoggled_la_SOURCES		= include/toggled.h \
 # Makefile includes
 GIT_PACKAGE_VERSION_DIR=include
 SUBST_EXPRESSIONS = 
-include $(srcdir)/contrib/bindletools/build-aux/makefile-autotools.am
-include $(srcdir)/contrib/bindletools/build-aux/makefile-subst.am
-include $(srcdir)/contrib/bindletools/build-aux/makefile-version.am
+include $(srcdir)/$(bindletools_srcdir)/build-aux/makefile-autotools.am
+include $(srcdir)/$(bindletools_srcdir)/build-aux/makefile-subst.am
+include $(srcdir)/$(bindletools_srcdir)/build-aux/makefile-version.am
 
 
 # custom targets

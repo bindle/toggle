@@ -65,6 +65,33 @@ noinst_PROGRAMS				=
 bin_PROGRAMS				=
 
 
+# lists
+BUILT_SOURCES				= include/git-package-version.h
+TESTS					=
+XFAIL_TESTS				=
+EXTRA_MANS				=
+EXTRA_DIST				= build-aux/git-tar-name.txt  \
+					  contrib/bindletools/COPYING \
+					  contrib/bindletools/README \
+					  contrib/bindletools/build-aux/autogen.sh \
+					  contrib/bindletools/build-aux/git-package-version.sh \
+					  contrib/bindletools/build-aux/makefile-autotools.am \
+					  contrib/bindletools/build-aux/makefile-subst.am \
+					  contrib/bindletools/build-aux/makefile-version.am \
+					  contrib/bindletools/m4/bindle-gcc.m4 \
+					  contrib/bindletools/m4/bindle-git.m4 \
+					  include/git-package-version.txt \
+					  lib/libtoggled.sym
+CLEANFILES				= \
+					  $(builddir)/a.out   $(srcdir)/a.out \
+					  $(builddir)/*/a.out $(srcdir)/*/a.out \
+					  config.h.in~ $(srcdir)/config.h.in~ \
+					  $(man_MANS) \
+					  @PACKAGE_TARNAME@-*.tar.* \
+					  @PACKAGE_TARNAME@-*.zip
+DISTCHECK_CONFIGURE_FLAGS		= --enable-strictwarnings
+
+
 # macros for lib/libtoggled.la
 lib_libtoggled_la_DEPENDENCIES		= Makefile lib/libtoggled.sym
 lib_libtoggled_la_CFLAGS		= $(AM_CFLAGS)
@@ -79,29 +106,6 @@ lib_libtoggled_la_SOURCES		= include/toggled.h \
 					  lib/libtoggled_errors.c
 
 
-# lists
-BUILT_SOURCES				= include/git-package-version
-TESTS					=
-XFAIL_TESTS				=
-EXTRA_MANS				=
-EXTRA_DIST				= build-aux/git-tar-name.txt  \
-					  contrib/bindletools/COPYING \
-					  contrib/bindletools/README \
-					  contrib/bindletools/build-aux/autogen.sh \
-					  contrib/bindletools/build-aux/git-package-version.sh \
-					  contrib/bindletools/m4/bindle.m4 \
-					  include/git-package-version.txt \
-					  lib/libtoggled.sym
-CLEANFILES				= \
-					  $(builddir)/a.out   $(srcdir)/a.out \
-					  $(builddir)/*/a.out $(srcdir)/*/a.out \
-					  config.h.in~ $(srcdir)/config.h.in~ \
-					  $(man_MANS) \
-					  @PACKAGE_TARNAME@-*.tar.* \
-					  @PACKAGE_TARNAME@-*.zip
-DISTCHECK_CONFIGURE_FLAGS		= --enable-strictwarnings
-
-
 # Makefile includes
 GIT_PACKAGE_VERSION_DIR=include
 SUBST_EXPRESSIONS = 
@@ -111,19 +115,7 @@ include $(srcdir)/contrib/bindletools/build-aux/makefile-version.am
 
 
 # custom targets
-.PHONY: update gitclean include/git-package-version
-
-include/git-package-version:
-	@@GIT_VERSION_SCRIPT@ $(top_srcdir) > /dev/null 2>&1
-
-gitclean:
-	$(MAKE) -f Makefile distclean
-	rm -f  $(top_srcdir)/INSTALL
-	rm -f  $(top_srcdir)/Makefile.in
-	rm -f  $(top_srcdir)/aclocal.m4
-	rm -f  $(top_srcdir)/config.h.in
-	rm -f  $(top_srcdir)/configure
-	rm -f  $(top_srcdir)/include/git-package-version
+.PHONY:
 
 
 # local targets

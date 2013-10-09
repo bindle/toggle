@@ -81,7 +81,7 @@ EXTRA_DIST				= build-aux/git-tar-name.txt  \
 					  contrib/bindletools/m4/bindle-gcc.m4 \
 					  contrib/bindletools/m4/bindle-git.m4 \
 					  include/git-package-version.txt \
-					  lib/libtoggled.sym
+					  lib/libtoggled/libtoggled.sym
 CLEANFILES				= \
 					  $(builddir)/a.out   $(srcdir)/a.out \
 					  $(builddir)/*/a.out $(srcdir)/*/a.out \
@@ -93,17 +93,17 @@ DISTCHECK_CONFIGURE_FLAGS		= --enable-strictwarnings
 
 
 # macros for lib/libtoggled.la
-lib_libtoggled_la_DEPENDENCIES		= Makefile lib/libtoggled.sym
+lib_libtoggled_la_DEPENDENCIES		= Makefile lib/libtoggled/libtoggled.sym
 lib_libtoggled_la_CFLAGS		= $(AM_CFLAGS)
 lib_libtoggled_la_LIBADD		= $(AM_LIBS)
 lib_libtoggled_la_LDFLAGS		= -rpath '$(libdir)' \
 					  -version-info $(LIB_VERSION_INFO) \
 					  $(AM_LDFLAGS) \
 					  -pthread \
-					  -export-symbols $(srcdir)/lib/libtoggled.sym
+					  -export-symbols $(srcdir)/lib/libtoggled/libtoggled.sym
 lib_libtoggled_la_SOURCES		= include/toggled.h \
-					  lib/libtoggled.h \
-					  lib/libtoggled_errors.c
+					  lib/libtoggled/libtoggled.h \
+					  lib/libtoggled/libtoggled_errors.c
 
 
 # Makefile includes

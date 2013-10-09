@@ -63,6 +63,13 @@
 			remoteGlobalIDString = A02A091D148F45FA002CF25C;
 			remoteInfo = toggle;
 		};
+		A0DE935318050E33006A16A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0C362B51613C02500B264B9 /* bindletools.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A01156E9175B0118008E66FA;
+			remoteInfo = bindle;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -145,7 +152,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A0013C2B13985A8A002C1065 /* lib */ = {
+		A0013C2B13985A8A002C1065 /* libtoggled */ = {
 			isa = PBXGroup;
 			children = (
 				A0013C381398BC5A002C1065 /* libtoggled.sym */,
@@ -153,7 +160,7 @@
 				A0013C36139865B6002C1065 /* libtoggled_errors.c */,
 				A0013C37139865B6002C1065 /* libtoggled_memory.c */,
 			);
-			path = lib;
+			path = libtoggled;
 			sourceTree = "<group>";
 		};
 		A02A08FD148F442D002CF25C /* Products */ = {
@@ -181,7 +188,7 @@
 				A076436D1365391D00ABD7BB /* build-aux */,
 				A06565EC135A592F0025E7F7 /* doc */,
 				A0B6FD471378F82000B0ED38 /* include */,
-				A0013C2B13985A8A002C1065 /* lib */,
+				A0DE934E18050E33006A16A1 /* lib */,
 				A07643711365398100ABD7BB /* m4 */,
 				A0764372136539A100ABD7BB /* src */,
 				A0C362B31613BBF400B264B9 /* contrib */,
@@ -239,8 +246,17 @@
 		A0C362B61613C02500B264B9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				A0DE935418050E33006A16A1 /* libbindle.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A0DE934E18050E33006A16A1 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				A0013C2B13985A8A002C1065 /* libtoggled */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,6 +384,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A0DE935418050E33006A16A1 /* libbindle.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libbindle.a;
+			remoteRef = A0DE935318050E33006A16A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A02A090C148F45DE002CF25C /* Sources */ = {

@@ -33,6 +33,25 @@
 #
 #   lib/libaputils/libaputils.sym - exported symbols
 #
+#   Build:
+#      CFLAGS="-g -O2 -W -Wall -Werror -I../../include"
+#      LDFLAGS="-g -O2 -export-symbols libtoggled.sym -rpath /usr/local/lib"
+#      export CFLAGS LDFLAGS
+#
+#      libtool --tag=CC --mode=compile gcc ${CFLAGS} -c libtoggled_errors.c
+#      libtool --tag=CC --mode=compile gcc ${CFLAGS} -c libtoggled_memory.c
+#      libtool --tag=CC --mode=link    gcc ${LDFLAGS} -o libtoggled.la \
+#              libtoggled_errors.lo libtoggled_memory.lo
+#
+#   Install:
+#      libtool --mode=install install -c libtoggled.la /usr/local/lib/libtoggled.la
+#
+#   Uninstall:
+#      libtool --mode=uninstall rm -f /usr/local/lib/libtoggled.la
+#
+#   Clean:
+#      libtool --mode=clean rm -f libtoggled.la libtoggled_errors.lo libtoggled_memory.lo
+#
 toggled_errno
 toggled_initialize
 toggled_perror

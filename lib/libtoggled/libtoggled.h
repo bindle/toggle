@@ -69,7 +69,6 @@
 #include <toggled_module.h>
 
 #include <pthread.h>
-#include <ltdl.h>
 
 
 //////////////

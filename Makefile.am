@@ -79,40 +79,6 @@ lib_libtoggled_la_SOURCES		= include/toggled.h \
 					  lib/libtoggled_errors.c
 
 
-# substitution routine
-do_subst = sed \
-	-e 's,[@]SHELL[@],@SHELL@,g' \
-	-e 's,[@]PACKAGE_VERSION[@],@PACKAGE_VERSION@,g' \
-	-e 's![@]PACKAGE_NAME[@]!@PACKAGE_NAME@!g' \
-	-e 's,[@]PACKAGE_TARNAME[@],@PACKAGE_TARNAME@,g' \
-	-e 's,[@]PACKAGE_BUGREPORT[@],@PACKAGE_BUGREPORT@,g' \
-	-e 's,[@]RELEASE_MONTH[@],@RELEASE_MONTH@,g' \
-	-e 's,[@]INSTALL[@],$(INSTALL),g' \
-	-e 's,[@]INSTALL_PROGRAM[@],$(INSTALL_PROGRAM),g' \
-	-e 's,[@]INSTALL_SCRIPT[@],$(INSTALL_SCRIPT),g' \
-	-e 's,[@]INSTALL_DATA[@],$(INSTALL_DATA),g' \
-	-e 's,[@]LIB_VERSION_CURRENT[@],@LIB_VERSION_CURRENT@,g' \
-	-e 's,[@]LIB_VERSION_REVISION[@],@LIB_VERSION_REVISION@,g' \
-	-e 's,[@]LIB_VERSION_AGE[@],@LIB_VERSION_AGE@,g' \
-	-e 's,[@]LIB_VERSION_INFO[@],@LIB_VERSION_INFO@,g' \
-	-e 's,[@]LIB_RELEASE_INFO[@],@LIB_RELEASE_INFO@,g' \
-	-e 's,[@]prefix[@],$(prefix),g' \
-	-e 's,[@]datadir[@],$(datadir),g' \
-	-e 's,[@]sbindir[@],$(sbindir),g' \
-	-e 's,[@]sysconfdir[@],$(sysconfdir),g' \
-	-e 's,[@]localstatedir[@],$(localstatedir),g'
-do_subst_fn = \
-		echo "do_subst < ${@}.in > ${@}"; \
-		mkdir -p `dirname ${@}` || exit 1; \
-		${do_subst} < $(srcdir)/${@}.in > ${@} || exit 1; \
-		chmod 0755 ${@}
-do_subst_dt = \
-		echo "do_subst < ${@}.in > ${@}"; \
-		mkdir -p `dirname ${@}` || exit 1; \
-		${do_subst} < $(srcdir)/${@}.in > ${@} || exit 1; \
-		chmod 0644 ${@}
-
-
 # lists
 BUILT_SOURCES				= include/git-package-version
 TESTS					=
@@ -136,14 +102,19 @@ CLEANFILES				= \
 DISTCHECK_CONFIGURE_FLAGS		= --enable-strictwarnings
 
 
+# Makefile includes
+GIT_PACKAGE_VERSION_DIR=include
+SUBST_EXPRESSIONS = 
+include $(srcdir)/contrib/bindletools/build-aux/makefile-autotools.am
+include $(srcdir)/contrib/bindletools/build-aux/makefile-subst.am
+include $(srcdir)/contrib/bindletools/build-aux/makefile-version.am
+
+
 # custom targets
-.PHONY: autoreconf update gitclean include/git-package-version
+.PHONY: update gitclean include/git-package-version
 
 include/git-package-version:
 	@@GIT_VERSION_SCRIPT@ $(top_srcdir) > /dev/null 2>&1
-
-autoreconf:
-	autoreconf -i -f $(ACLOCAL_AMFLAGS) $(top_srcdir)
 
 gitclean:
 	$(MAKE) -f Makefile distclean
